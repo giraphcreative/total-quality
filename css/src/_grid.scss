@@ -1,0 +1,57 @@
+
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+
+.half {
+	@include respond-to( 768px ) {
+		width: 50%;
+	}
+}
+
+
+.third {
+	.narrow-thirds & {
+		padding: 15px 5%;
+	}
+	
+	@include respond-to( 768px ) {
+		width: 33%;
+	}
+}
+
+
+.fifth {
+	@include respond-to( 768px ) {
+		width: 20%;
+	}
+}
+
+
+.two-fifth {
+	@include respond-to( 768px ) {
+		width: 40%;
+	}
+}
+
+
+.half, .third, .fifth, .two-fifth {
+	display: block;
+	padding: 8px 15px;
+
+	@include respond-to( 768px ) {
+		padding: 15px 25px;
+		float: left;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+

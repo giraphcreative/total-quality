@@ -1,0 +1,69 @@
+
+
+.showcase {
+	position: relative;
+	border-bottom: 5px solid $blue-medium;
+
+	@include respond-to( 768px ) {
+		border-bottom: 0;
+	}
+
+	img {
+		display: block;
+	}
+
+	h1 {
+		padding: 15px;
+		font-size: 30px;
+		color: white;
+		text-transform: uppercase;
+
+		@include respond-to( 768px ) {
+			position: absolute;
+			left: 0;
+			top: 30px;
+			font-size: 35px;
+			letter-spacing: 3px;
+			padding: 25px;
+		}
+
+		@include respond-to( 1024px ) {
+			font-size: 45px;
+		}
+	}
+
+	.content {
+		padding: 15px;
+		font-size: .8em;
+
+		@include respond-to( 768px ) {
+			position: absolute;
+			right: 30px;
+			top: 20px;
+			border-radius: 20px;
+			width: 280px;
+		}
+
+		@include respond-to( 1024px ) {
+			top: 60px;
+		}
+	}
+
+	&.green {
+		.content {
+			background: $green;
+			color: darken( $green, 40% );
+		}
+	}
+
+	&.blue {
+		h1 {
+			background-color: $blue-medium;
+		}
+		.content {
+			background: $blue-light;
+			color: $blue-dark;
+		}
+	}
+}
+

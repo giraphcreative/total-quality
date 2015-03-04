@@ -1,0 +1,20 @@
+
+
+$blue-dark: #2D3C4D;
+$blue-medium-dark: #2C4E86;
+$blue-medium: #6784B4;
+$blue-light: #A7CAEB;
+$green: #64AC45;
+
+.bg-green { background-color: $green; color: white; }
+.bg-blue-light { background-color: $blue-light; color: white; }
+.bg-blue-medium { background-color: $blue-medium; color: white; }
+.bg-blue-medium-dark { background-color: $blue-medium-dark; color: white; }
+.bg-blue-dark { background-color: $blue-dark; color: white; }
+
+.text-green { color: $green; }
+.text-blue-light { color: $blue-light; }
+.text-blue-medium { color: $blue-medium; }
+.text-blue-medium-dark { color: $blue-medium-dark; }
+.text-blue-dark { color: $blue-dark; }
+

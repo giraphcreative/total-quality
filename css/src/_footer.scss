@@ -1,0 +1,22 @@
+
+
+footer {
+	font-size: .8em;
+	position: relative;
+
+	.social {
+		@include respond-to( 768px ) {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: auto;
+		}
+	}
+}
+
+
+.copyright {
+	padding: 20px;
+	text-align: center;
+}
+

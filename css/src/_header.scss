@@ -1,0 +1,52 @@
+
+
+header {
+	background: $blue-dark;
+	@include clearfix;
+
+	.logo {
+		padding: 10px;
+		text-align: center;
+		
+		img {
+			max-height: 100px;
+			max-width: 400px;
+		}
+
+		@include respond-to( 768px ) {
+			width: 35%;
+			float: left;
+		}
+	}
+
+	ul {
+		padding-bottom: 5px;
+
+		li {
+			a {
+				display: block;
+				color: white;
+				padding: 5px 10px;
+				text-decoration: none;
+				text-transform: uppercase;
+				text-align: center;
+				font-size: .9em;
+			}
+		}
+		
+		@include respond-to( 768px ) {
+			width: 65%;
+			float: left;
+			padding: 40px 0 0 0;
+
+			li {
+				float: left;
+			}
+		}
+
+		@include respond-to( 1024px ) {
+			padding-top: 50px;
+		}
+	}
+}
+
