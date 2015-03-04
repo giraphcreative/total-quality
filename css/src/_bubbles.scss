@@ -1,0 +1,56 @@
+
+
+.bubbles {
+	padding: 15px;
+
+	.bubble {
+		padding: 15px;
+		margin-bottom: 30px;
+
+		@include respond-to( 400px ) {
+			width: 50%;
+			float: left;
+		}
+
+		@include respond-to( 800px ) {
+			width: 33.33%;
+		}
+
+		@include respond-to( 1200px ) {
+			width: 25%;
+		}
+
+		.photo {
+			border: 2px solid white;
+			border-radius: 50%;
+			margin-bottom: 20px;
+			overflow: hidden;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		.box {
+			border: 4px solid white;
+			border-radius: 20px;
+			background: $blue-medium-dark;
+			padding: 20px 30px;
+			text-align: center;
+			margin: 0 20px;
+			min-height: 150px;
+			
+			h4 {
+				padding: 0 0 5px;
+			}
+
+			p {
+				font-size: .9em;
+				line-height: 1.4em;
+				padding: 0;
+			}
+		}
+	}
+}
+

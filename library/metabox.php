@@ -417,6 +417,56 @@ function tq_metaboxes() {
 	) );
 
 
+	// BUBBLES!
+	$cmb_bubbles = new_cmb2_box( array(
+		'id' => CMB_PREFIX . 'bubbles',
+		'title' => __( 'Bubbles', 'cmb2' ),
+		'object_types' => array( 'page', ),
+		'show_on' => array( 'key' => 'template', 'value' => array( 'page-bubbles' ) )
+	) );
+
+	$cmb_bubbles->add_field( array(
+		'name' => 'Subtitle',
+		'id' => CMB_PREFIX . 'page_subtitle',
+		'type' => 'text',
+	) );
+
+	$group_field_id = $cmb_bubbles->add_field( array(
+		'id' => CMB_PREFIX . 'bubbles',
+		'type' => 'group',
+		'description' => __( 'Add photo bubbles into this page.', 'cmb2' ),
+		'options' => array(
+			'group_title' => __( 'Bubble {#}', 'cmb2' ),
+			'add_button' => __( 'Add Bubble', 'cmb2' ),
+			'remove_button' => __( 'Remove Bubble', 'cmb2' ),
+			'sortable' => true,
+		),
+	) );
+
+	$cmb_bubbles->add_group_field( $group_field_id, array(
+		'name' => __( 'Photo', 'cmb2' ),
+		'id' => 'image',
+		'type' => 'file',
+	) );
+
+	$cmb_bubbles->add_group_field( $group_field_id, array(
+		'name' => __( 'Title', 'cmb2' ),
+		'id' => 'title',
+		'type' => 'text',
+	) );
+
+	$cmb_bubbles->add_group_field( $group_field_id, array(
+		'name' => __( 'Content', 'cmb2' ),
+		'id' => 'content',
+		'type' => 'textarea_small',
+	) );
+
+	$cmb_bubbles->add_group_field( $group_field_id, array(
+		'name' => __( 'Link', 'cmb2' ),
+		'id' => 'link',
+		'type' => 'text',
+	) );
+
 }
 
 
