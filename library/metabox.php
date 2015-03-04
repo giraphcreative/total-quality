@@ -64,7 +64,7 @@ function yourprefix_register_demo_metabox() {
 	/**
 	 * Sample metabox to demonstrate each field type included
 	 */
-	$cmb_demo = new_cmb2_box( array(
+	$cmb_showcase = new_cmb2_box( array(
 		'id' => CMB_PREFIX . 'metabox',
 		'title' => __( 'Showcase', 'cmb2' ),
 		'object_types' => array( 'page', ), // Post type
@@ -75,7 +75,7 @@ function yourprefix_register_demo_metabox() {
 		// 'closed'     => true, // true to keep the metabox closed by default
 	) );
 
-	$cmb_demo->add_field( array(
+	$cmb_showcase->add_field( array(
 		'name' => __( 'Title', 'cmb2' ),
 		'desc' => __( 'Enter a title to display in the showcase.', 'cmb2' ),
 		'id' => CMB_PREFIX . 'showcase_title',
@@ -86,28 +86,89 @@ function yourprefix_register_demo_metabox() {
 		// 'repeatable'      => true,
 	) );
 
-	$cmb_demo->add_field( array(
-		'name'    => __( 'Content', 'cmb2' ),
-		'desc'    => __( 'Enter the content for the light blue box in the showcase.', 'cmb2' ),
-		'id'      => CMB_PREFIX . 'showcase_content',
-		'type'    => 'wysiwyg',
+	$cmb_showcase->add_field(array(
+	    'name' => 'Title BG Color',
+	    'desc' => 'Select a background color for the title.',
+	    'id' => CMB_PREFIX . 'showcase_title_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_showcase->add_field( array(
+		'name' => __( 'Content', 'cmb2' ),
+		'desc' => __( 'Enter the content for the light blue box in the showcase.', 'cmb2' ),
+		'id' => CMB_PREFIX . 'showcase_content',
+		'type' => 'wysiwyg',
 		'options' => array( 'textarea_rows' => 5, ),
 	) );
 
-	$cmb_demo->add_field( array(
+	$cmb_showcase->add_field( array(
 		'name' => __( 'Link', 'cmb2' ),
-		'desc' => __( 'Enter a link for the ', 'cmb2' ),
-		'id'   => CMB_PREFIX . 'showcase_link',
+		'desc' => __( 'Enter a link for the showcase.', 'cmb2' ),
+		'id' => CMB_PREFIX . 'showcase_link',
 		'type' => 'text',
 	) );
 
-	$cmb_demo->add_field( array(
+	$cmb_showcase->add_field( array(
 		'name' => __( 'Photo', 'cmb2' ),
 		'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
-		'id'   => CMB_PREFIX . 'showcase_photo',
+		'id' => CMB_PREFIX . 'showcase_photo',
 		'type' => 'file',
 	) );
 
+	$cmb_showcase->add_field( array(
+		'name' => __( 'Button Text', 'cmb2' ),
+		'desc' => __( 'Text to display on the button', 'cmb2' ),
+		'id' => CMB_PREFIX . 'showcase_button_text',
+		'type' => 'text',
+	) );
+
+	$cmb_showcase->add_field( array(
+		'name' => __( 'Button Icon', 'cmb2' ),
+		'desc' => __( 'Upload an image or enter a URL for the button icon.', 'cmb2' ),
+		'id' => CMB_PREFIX . 'showcase_button_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_showcase->add_field(array(
+	    'name' => 'Button Color',
+	    'desc' => 'Select a color for the button',
+	    'id' => CMB_PREFIX . 'showcase_button_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
 }
 
+
+
+
+function get_cmb_value( $field ) {
+    return get_post_meta( get_the_ID(), CMB_PREFIX . $field, 1 );
+}
+
+
+
+function show_cmb_value( $field ) {
+    print get_cmb_value( $field );
+}
+
+
+function has_cmb_value( $field ) {
+	return ( !empty( get_cmb_value( $field ) ) ? true : false );
+}
 

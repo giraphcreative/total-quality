@@ -191,6 +191,8 @@ header {
 .showcase {
   position: relative;
   border-bottom: 5px solid #6784B4; }
+  .showcase a {
+    text-decoration: none; }
   @media only screen and (min-width: 768px) {
     .showcase {
       border-bottom: 0; } }
@@ -205,16 +207,19 @@ header {
       .showcase h1 {
         position: absolute;
         left: 0;
-        top: 30px;
+        top: 20px;
         font-size: 35px;
         letter-spacing: 3px;
         padding: 25px; } }
     @media only screen and (min-width: 1024px) {
       .showcase h1 {
+        top: 40px;
         font-size: 45px; } }
   .showcase .content {
     padding: 15px;
-    font-size: .8em; }
+    font-size: .9em;
+    background: #A7CAEB;
+    color: #2D3C4D; }
     @media only screen and (min-width: 768px) {
       .showcase .content {
         position: absolute;
@@ -224,15 +229,18 @@ header {
         width: 280px; } }
     @media only screen and (min-width: 1024px) {
       .showcase .content {
-        top: 60px; } }
-  .showcase.green .content {
-    background: #64AC45;
-    color: #0f1a0b; }
-  .showcase.blue h1 {
-    background-color: #6784B4; }
-  .showcase.blue .content {
-    background: #A7CAEB;
-    color: #2D3C4D; }
+        top: 40px; } }
+  .showcase .button-large {
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      .showcase .button-large {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        right: 30px; } }
+    @media only screen and (min-width: 1024px) {
+      .showcase .button-large {
+        bottom: 40px; } }
 
 .narrow-thirds {
   padding: 30px 20px; }
@@ -259,27 +267,50 @@ header {
   text-transform: uppercase;
   text-decoration: none; }
 
-.button-large {
+.button-half {
   padding: 30px 20px;
   text-decoration: none;
   font-variant: small-caps;
-  font-size: 23px; }
+  font-size: 23px;
+  display: block; }
   @media only screen and (min-width: 768px) {
-    .button-large {
-      padding: 50px 30px; } }
-  .button-large.financial {
+    .button-half {
+      padding: 50px 30px;
+      float: left;
+      width: 50%; } }
+  .button-half.financial {
     text-align: right;
     background-image: url(../img/icon-building.png);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain; }
-  .button-large.manufacturers {
+  .button-half.manufacturers {
     background-image: url(../img/icon-gears.png);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain; }
-  .button-large:hover {
+  .button-half:hover {
     opacity: .9; }
+
+.button-large {
+  position: relative;
+  display: inline-block;
+  color: white;
+  border-radius: 10px;
+  border: 3px solid white;
+  padding: 30px 40px 30px 70px;
+  margin: 15px 0;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .button-large .icon {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+    border-radius: 50%; }
 
 .icon-circle {
   max-width: 120px;

@@ -4,6 +4,10 @@
 	position: relative;
 	border-bottom: 5px solid $blue-medium;
 
+	a {
+		text-decoration: none;
+	}
+
 	@include respond-to( 768px ) {
 		border-bottom: 0;
 	}
@@ -21,20 +25,23 @@
 		@include respond-to( 768px ) {
 			position: absolute;
 			left: 0;
-			top: 30px;
+			top: 20px;
 			font-size: 35px;
 			letter-spacing: 3px;
 			padding: 25px;
 		}
 
 		@include respond-to( 1024px ) {
+			top: 40px;
 			font-size: 45px;
 		}
 	}
 
 	.content {
 		padding: 15px;
-		font-size: .8em;
+		font-size: .9em;
+		background: $blue-light;
+		color: $blue-dark;
 
 		@include respond-to( 768px ) {
 			position: absolute;
@@ -45,25 +52,24 @@
 		}
 
 		@include respond-to( 1024px ) {
-			top: 60px;
+			top: 40px;
 		}
 	}
 
-	&.green {
-		.content {
-			background: $green;
-			color: darken( $green, 40% );
+	.button-large {
+		display: none;
+
+		@include respond-to( 768px ) {
+			display: block;
+			position: absolute;
+			bottom: 20px;
+			right: 30px;
+		}
+
+		@include respond-to( 1024px ) {
+			bottom: 40px;
 		}
 	}
 
-	&.blue {
-		h1 {
-			background-color: $blue-medium;
-		}
-		.content {
-			background: $blue-light;
-			color: $blue-dark;
-		}
-	}
 }
 
