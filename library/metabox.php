@@ -83,7 +83,7 @@ function tq_metaboxes() {
 	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
 	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
 	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
-	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
 	    ),
 	    'default' => 'bg-blue-dark',
 	));
@@ -134,7 +134,7 @@ function tq_metaboxes() {
 	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
 	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
 	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
-	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
 	    ),
 	    'default' => 'bg-blue-dark',
 	));
@@ -166,7 +166,7 @@ function tq_metaboxes() {
 	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
 	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
 	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
-	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
 	    ),
 	    'default' => 'bg-blue-dark',
 	));
@@ -198,7 +198,7 @@ function tq_metaboxes() {
 	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
 	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
 	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
-	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
 	    ),
 	    'default' => 'bg-blue-dark',
 	));
@@ -230,7 +230,7 @@ function tq_metaboxes() {
 	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
 	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
 	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
-	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
 	    ),
 	    'default' => 'bg-blue-dark',
 	));
@@ -262,7 +262,7 @@ function tq_metaboxes() {
 	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
 	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
 	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
-	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
 	    ),
 	    'default' => 'bg-blue-dark',
 	));
@@ -301,7 +301,7 @@ function tq_metaboxes() {
 	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
 	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
 	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
-	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
 	    ),
 	    'default' => 'bg-blue-dark',
 	));
@@ -340,7 +340,7 @@ function tq_metaboxes() {
 	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
 	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
 	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
-	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
 	    ),
 	    'default' => 'bg-blue-dark',
 	));
@@ -391,7 +391,7 @@ function tq_metaboxes() {
 	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
 	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
 	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
-	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
 	    ),
 	    'default' => 'bg-blue-dark',
 	));
@@ -405,7 +405,7 @@ function tq_metaboxes() {
 	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
 	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
 	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
-	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
 	    ),
 	    'default' => 'bg-blue-dark-medium',
 	));
@@ -466,6 +466,7 @@ function tq_metaboxes() {
 		'id' => 'link',
 		'type' => 'text',
 	) );
+
 
 }
 
