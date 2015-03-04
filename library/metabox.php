@@ -19,7 +19,6 @@ require_once 'metabox/init.php';
 
 
 
-
 /**
  * Metabox for Page Template
  * @author Kenneth White
@@ -53,26 +52,18 @@ add_filter( 'cmb2_show_on', 'metabox_show_on_template', 10, 2 );
 
 
 
+add_action( 'cmb2_init', 'tq_metaboxes' );
+function tq_metaboxes() {
 
 
-add_action( 'cmb2_init', 'yourprefix_register_demo_metabox' );
-/**
- * Hook in and add a demo metabox. Can only happen on the 'cmb2_init' hook.
- */
-function yourprefix_register_demo_metabox() {
-
-	/**
-	 * Sample metabox to demonstrate each field type included
-	 */
+	// SHOWCASE METABOX
 	$cmb_showcase = new_cmb2_box( array(
-		'id' => CMB_PREFIX . 'metabox',
+		'id' => CMB_PREFIX . 'showcase',
 		'title' => __( 'Showcase', 'cmb2' ),
 		'object_types' => array( 'page', ), // Post type
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
-		// 'cmb_styles' => false, // false to disable the CMB stylesheet
-		// 'closed'     => true, // true to keep the metabox closed by default
 	) );
 
 	$cmb_showcase->add_field( array(
@@ -80,10 +71,6 @@ function yourprefix_register_demo_metabox() {
 		'desc' => __( 'Enter a title to display in the showcase.', 'cmb2' ),
 		'id' => CMB_PREFIX . 'showcase_title',
 		'type' => 'text',
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
 	) );
 
 	$cmb_showcase->add_field(array(
@@ -152,8 +139,135 @@ function yourprefix_register_demo_metabox() {
 	    'default' => 'bg-blue-dark',
 	));
 
-}
 
+	// NARROW-THIRDS METABOX
+	$cmb_thirds = new_cmb2_box( array(
+		'id' => CMB_PREFIX . 'narrow_thirds',
+		'title' => __( 'Narrow Thirds', 'cmb2' ),
+		'object_types' => array( 'page', ), // Post type
+		'context' => 'normal',
+		'priority' => 'high',
+		'show_names' => true, // Show field names on the left
+	) );
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Title (1)',
+		'id' => CMB_PREFIX . 'third_1_title',
+		'type' => 'text',
+	) );
+
+	$cmb_thirds->add_field(array(
+	    'name' => 'Color (1)',
+	    'id' => CMB_PREFIX . 'third_1_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Icon (1)',
+		'id' => CMB_PREFIX . 'third_1_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Content (1)',
+		'id' => CMB_PREFIX . 'third_1_content',
+		'type' => 'wysiwyg',
+		'options' => array( 'textarea_rows' => 5, ),
+	) );
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Link (1)',
+		'id' => CMB_PREFIX . 'third_1_link',
+		'type' => 'text',
+	) );
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Title (2)',
+		'id' => CMB_PREFIX . 'third_2_title',
+		'type' => 'text',
+	) );
+
+	$cmb_thirds->add_field(array(
+	    'name' => 'Color (2)',
+	    'id' => CMB_PREFIX . 'third_2_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Icon (2)',
+		'id' => CMB_PREFIX . 'third_2_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Content (2)',
+		'id' => CMB_PREFIX . 'third_2_content',
+		'type' => 'wysiwyg',
+		'options' => array( 'textarea_rows' => 5, ),
+	) );
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Link (2)',
+		'id' => CMB_PREFIX . 'third_2_link',
+		'type' => 'text',
+	) );
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Title (3)',
+		'id' => CMB_PREFIX . 'third_3_title',
+		'type' => 'text',
+	) );
+
+	$cmb_thirds->add_field(array(
+	    'name' => 'Color (3)',
+	    'id' => CMB_PREFIX . 'third_3_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Icon (3)',
+		'id' => CMB_PREFIX . 'third_3_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Content (3)',
+		'id' => CMB_PREFIX . 'third_3_content',
+		'type' => 'wysiwyg',
+		'options' => array( 'textarea_rows' => 5, ),
+	) );
+
+	$cmb_thirds->add_field( array(
+		'name' => 'Link (3)',
+		'id' => CMB_PREFIX . 'third_3_link',
+		'type' => 'text',
+	) );
+
+}
 
 
 
@@ -168,7 +282,10 @@ function show_cmb_value( $field ) {
 }
 
 
+
 function has_cmb_value( $field ) {
 	return ( !empty( get_cmb_value( $field ) ) ? true : false );
 }
 
+
+?>

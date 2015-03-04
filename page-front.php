@@ -34,36 +34,21 @@ get_header();
 				<?php if ( has_cmb_value( 'showcase_link' ) ) { ?></a><?php } ?>
 			</div>
 
-			<a href="#" class="button-half bg-blue-light financial">Financial Institutions</a>
-			<a href="#" class="button-half bg-green manufacturers">Manufacturers</a>
+			<a href="/financial" class="button-half bg-blue-light financial">Financial Institutions</a>
+			<a href="/manufacturers" class="button-half bg-green manufacturers">Manufacturers</a>
 
 			<div class="narrow-thirds bg-blue-dark group">
 
-				<div class="third blue">
-					<h3 class="text-center">Decision-Makers</h3>
-					<div class="icon-circle bg-blue-medium-dark">
-						<img src="img/icon-user-search.png">
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt sapien vitae massa elementum imperdiet. Nullam at viverra orci. Praesent pharetra quam eu orci finibus, eget dapibus nibh porta.</p>
-					<p><a href="#" class="button arrow-right">Read more</a></p>
+				<div class="third">
+					<?php show_third( 1 ) ?>
 				</div>
 
-				<div class="third green">
-					<h3 class="text-center">Candidates</h3>
-					<div class="icon-circle bg-green">
-						<img src="img/icon-binoculars.png">
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt sapien vitae massa elementum imperdiet. Nullam at viverra orci. Praesent pharetra quam eu orci finibus, eget dapibus nibh porta.</p>
-					<p><a href="#" class="button arrow-right">Read more</a></p>
+				<div class="third">
+					<?php show_third( 2 ) ?>
 				</div>
 
-				<div class="third blue-light">
-					<h3 class="text-center">Our Process</h3>
-					<div class="icon-circle bg-blue-medium">
-						<img src="img/icon-flower.png">
-					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt sapien vitae massa elementum imperdiet. Nullam at viverra orci. Praesent pharetra quam eu orci finibus, eget dapibus nibh porta.</p>
-					<p><a href="#" class="button arrow-right">Read more</a></p>
+				<div class="third">
+					<?php show_third( 3 ) ?>
 				</div>
 
 			</div>
