@@ -1,5 +1,9 @@
 <?php
 
+/*
+Template Name: Generic Page
+*/
+
 get_header();
 
 ?>
@@ -8,15 +12,12 @@ get_header();
 				<?php the_showcase(); ?>
 			</div>
 
-			<div id="content" class="site-content" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
-				<div class="image right">
-					<?php the_post_thumbnail(); ?>
-				</div>
-				<div class="content left">
+				<h1 class="subtitle <?php show_cmb_value( 'page_title_color' ) ?>"><?php show_cmb_value( 'page_subtitle' ) ?></h1>
+				<div class="main-content <?php show_cmb_value( 'page_bg_color' ) ?>"
+				<?php if ( has_cmb_value( 'page_icon' ) ) { ?>style="background-image: url(<?php show_cmb_value( 'page_icon' ) ?>);"<?php } ?>>
 					<?php the_content(); ?>
 				</div>
 			<?php endwhile; ?>
-			</div>
 
 <?php get_footer(); ?>

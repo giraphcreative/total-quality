@@ -148,7 +148,7 @@ function tq_metaboxes() {
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
-		'show_on' => array( 'template' => array( 'page-industry' ) )
+		'show_on' => array( 'key' => 'template', 'value' => array( 'page-industry' ) )
 	) );
 
 	$cmb_industry->add_field( array(
@@ -244,7 +244,7 @@ function tq_metaboxes() {
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
-		'show_on' => array( 'template' => array( 'page-front', 'page-industry' ) )
+		'show_on' => array( 'key' => 'template', 'value' => array( 'page-front', 'page-industry' ) )
 	) );
 
 	$cmb_thirds->add_field( array(
@@ -363,6 +363,59 @@ function tq_metaboxes() {
 		'id' => CMB_PREFIX . 'third_3_link',
 		'type' => 'text',
 	) );
+
+
+	// PAGE SETTINGS METABOX
+	$cmb_page = new_cmb2_box( array(
+		'id' => CMB_PREFIX . 'page_settings',
+		'title' => __( 'Page Settings', 'cmb2' ),
+		'object_types' => array( 'page', ), // Post type
+		'context' => 'normal',
+		'priority' => 'high',
+		'show_names' => true, // Show field names on the left
+		'show_on' => array( 'key' => 'template', 'value' => array( 'page' ) )
+	) );
+
+	$cmb_page->add_field( array(
+		'name' => 'Subtitle',
+		'id' => CMB_PREFIX . 'page_subtitle',
+		'type' => 'text',
+	) );
+
+	$cmb_page->add_field(array(
+	    'name' => 'Title Background Color',
+	    'id' => CMB_PREFIX . 'page_title_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_page->add_field(array(
+	    'name' => 'Content Background Color',
+	    'id' => CMB_PREFIX . 'page_bg_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark-medium',
+	));
+
+	$cmb_page->add_field( array(
+		'name' => 'Background Icon',
+		'id' => CMB_PREFIX . 'page_icon',
+		'type' => 'file',
+	) );
+
 
 }
 

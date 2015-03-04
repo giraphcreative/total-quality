@@ -278,6 +278,15 @@ header {
   color: #6784B4;
   padding-bottom: 20px; }
 
+.subtitle {
+  padding: 20px 30px; }
+
+.main-content {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  padding: 30px; }
+
 .button {
   display: inline-block;
   background: #64AC45;
