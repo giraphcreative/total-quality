@@ -300,16 +300,6 @@ header {
   .bubbles .bubble {
     padding: 15px;
     margin-bottom: 30px; }
-    @media only screen and (min-width: 400px) {
-      .bubbles .bubble {
-        width: 50%;
-        float: left; } }
-    @media only screen and (min-width: 800px) {
-      .bubbles .bubble {
-        width: 33.33%; } }
-    @media only screen and (min-width: 1200px) {
-      .bubbles .bubble {
-        width: 25%; } }
     .bubbles .bubble .photo {
       border: 2px solid white;
       border-radius: 50%;
@@ -322,16 +312,45 @@ header {
       border: 4px solid white;
       border-radius: 20px;
       background: #2C4E86;
-      padding: 20px 30px;
       text-align: center;
-      margin: 0 20px;
-      min-height: 150px; }
+      padding: 10px 20px;
+      margin: 0; }
+      @media only screen and (min-width: 500px) {
+        .bubbles .bubble .box {
+          padding: 15px 20px;
+          min-height: 160px; } }
+      @media only screen and (min-width: 768px) {
+        .bubbles .bubble .box {
+          min-height: 150px; } }
+      @media only screen and (min-width: 1220px) {
+        .bubbles .bubble .box {
+          margin: 0 15px; } }
       .bubbles .bubble .box h4 {
         padding: 0 0 5px; }
       .bubbles .bubble .box p {
         font-size: .9em;
         line-height: 1.4em;
         padding: 0; }
+    @media only screen and (min-width: 500px) {
+      .bubbles .bubble {
+        width: 50%;
+        float: left; }
+        .bubbles .bubble:nth-child(3), .bubbles .bubble:nth-child(5), .bubbles .bubble:nth-child(7), .bubbles .bubble:nth-child(9), .bubbles .bubble:nth-child(11), .bubbles .bubble:nth-child(13), .bubbles .bubble:nth-child(15) {
+          clear: left; } }
+    @media only screen and (min-width: 768px) {
+      .bubbles .bubble {
+        width: 33.33%; }
+        .bubbles .bubble:nth-child(3), .bubbles .bubble:nth-child(5), .bubbles .bubble:nth-child(9), .bubbles .bubble:nth-child(11), .bubbles .bubble:nth-child(15) {
+          clear: none; }
+        .bubbles .bubble:nth-child(4), .bubbles .bubble:nth-child(10), .bubbles .bubble:nth-child(16) {
+          clear: left; } }
+    @media only screen and (min-width: 1220px) {
+      .bubbles .bubble {
+        width: 25%; }
+        .bubbles .bubble:nth-child(4), .bubbles .bubble:nth-child(7), .bubbles .bubble:nth-child(10), .bubbles .bubble:nth-child(16) {
+          clear: none; }
+        .bubbles .bubble:nth-child(5), .bubbles .bubble:nth-child(9), .bubbles .bubble:nth-child(17) {
+          clear: left; } }
 
 .button {
   display: inline-block;

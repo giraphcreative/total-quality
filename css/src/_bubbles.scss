@@ -7,19 +7,6 @@
 		padding: 15px;
 		margin-bottom: 30px;
 
-		@include respond-to( 400px ) {
-			width: 50%;
-			float: left;
-		}
-
-		@include respond-to( 800px ) {
-			width: 33.33%;
-		}
-
-		@include respond-to( 1200px ) {
-			width: 25%;
-		}
-
 		.photo {
 			border: 2px solid white;
 			border-radius: 50%;
@@ -36,10 +23,22 @@
 			border: 4px solid white;
 			border-radius: 20px;
 			background: $blue-medium-dark;
-			padding: 20px 30px;
 			text-align: center;
-			margin: 0 20px;
-			min-height: 150px;
+			padding: 10px 20px;
+			margin: 0;
+
+			@include respond-to( 500px ) {
+				padding: 15px 20px;
+				min-height: 160px;
+			}
+
+			@include respond-to( 768px ) {
+				min-height: 150px;
+			}
+
+			@include respond-to( 1220px ) {
+				margin: 0 15px;
+			}
 			
 			h4 {
 				padding: 0 0 5px;
@@ -51,6 +50,40 @@
 				padding: 0;
 			}
 		}
+
+		@include respond-to( 500px ) {
+			width: 50%;
+			float: left;
+
+			&:nth-child(3), &:nth-child(5), &:nth-child(7), &:nth-child(9), &:nth-child(11), &:nth-child(13), &:nth-child(15) {
+				clear: left;
+			}
+		}
+
+		@include respond-to( 768px ) {
+			width: 33.33%;
+
+			&:nth-child(3), &:nth-child(5), &:nth-child(9), &:nth-child(11), &:nth-child(15) {
+				clear: none;
+			}
+
+			&:nth-child(4), &:nth-child(10), &:nth-child(16) {
+				clear: left;
+			}
+		}
+
+		@include respond-to( 1220px ) {
+			width: 25%;
+
+			&:nth-child(4), &:nth-child(7), &:nth-child(10), &:nth-child(16) {
+				clear: none;
+			}
+
+			&:nth-child(5), &:nth-child(9), &:nth-child(17) {
+				clear: left;
+			}
+		}
+
 	}
 }
 
