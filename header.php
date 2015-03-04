@@ -19,7 +19,7 @@
 
 <div class="wrap">
 
-	<div class="container wrap group">
+	<div class="container group">
 		<header>
 
 			<div class="logo">
