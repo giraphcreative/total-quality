@@ -6,6 +6,12 @@
 }
 
 
+.wrap-narrow {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+
 .half {
 	@include respond-to( 768px ) {
 		width: 50%;
@@ -58,6 +64,7 @@
 .text-center {
 	text-align: center;
 }
+
 .text-right {
 	text-align: right;
 }
