@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Homepage
+Template Name: Industry
 */
 
 get_header();
@@ -30,12 +30,48 @@ get_header();
 					</div>
 					<?php } ?>
 					<?php show_cmb_value( 'showcase_button_text' ) ?>
+				</a>
 				<?php } ?>
 				<?php if ( has_cmb_value( 'showcase_link' ) ) { ?></a><?php } ?>
 			</div>
 
-			<a href="/financial" class="button-half bg-blue-light financial">Financial Institutions</a>
-			<a href="/manufacturers" class="button-half bg-green manufacturers">Manufacturers</a>
+			<div class="industry group <?php show_cmb_value( 'industry_color' ) ?>"
+				<?php if ( has_cmb_value( 'industry_background' ) ) { ?>style="background-image: url(<?php show_cmb_value( 'industry_background' ) ?>);"<?php } ?>>
+				<?php while ( have_posts() ) : the_post(); ?>
+				<div class="half">
+					<h2><?php the_title(); ?></h2>
+					<?php the_content(); ?>
+				</div>
+				<?php endwhile; ?>
+				
+				<div class="half text-center">
+
+				<?php if ( has_cmb_value( 'industry_button_1_text' ) 
+					&& has_cmb_value( 'industry_button_1_color' ) ) { ?>
+				<a href="<?php show_cmb_value( 'industry_button_1_link' ) ?>" class="button-large <?php show_cmb_value( 'industry_button_1_color' ) ?>">
+					<?php if ( has_cmb_value( 'industry_button_1_icon' ) ) { ?>
+					<div class="icon <?php show_cmb_value( 'industry_button_1_color' ) ?>">
+						<img src="<?php show_cmb_value( 'industry_button_1_icon' ) ?>">
+					</div>
+					<?php } ?>
+					<?php show_cmb_value( 'industry_button_1_text' ) ?>
+					</a>
+				<?php } ?>
+				
+				<?php if ( has_cmb_value( 'industry_button_2_text' ) 
+					&& has_cmb_value( 'industry_button_2_color' ) ) { ?>
+				<a href="<?php show_cmb_value( 'industry_button_2_link' ) ?>" class="button-large <?php show_cmb_value( 'industry_button_2_color' ) ?>">
+					<?php if ( has_cmb_value( 'industry_button_2_icon' ) ) { ?>
+					<div class="icon <?php show_cmb_value( 'industry_button_2_color' ) ?>">
+						<img src="<?php show_cmb_value( 'industry_button_2_icon' ) ?>">
+					</div>
+					<?php } ?>
+					<?php show_cmb_value( 'industry_button_2_text' ) ?>
+					</a>
+				<?php } ?>
+
+				</div>
+			</div>
 
 			<div class="narrow-thirds bg-blue-dark group">
 
@@ -55,12 +91,7 @@ get_header();
 
 			<div class="white-box group">
 
-				<div class="fifth chat">
-					<img src="<?php bloginfo( 'template_url' ) ?>/img/icon-chat.png">
-					<p>Lorem ipsum dolar sit amet.</p>
-				</div>
-
-				<div class="two-fifth news">
+				<div class="half news">
 					<h3>News</h3>
 					<h4><a href="#">01.03.2015</a></h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt sapien vitae massa elementum imperdiet. Nullam at viverra orci. Praesent pharetra quam eu orci finibus, eget dapibus nibh porta.</p>
@@ -68,7 +99,7 @@ get_header();
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt sapien vitae massa elementum imperdiet. Nullam at viverra orci. Praesent pharetra quam eu orci finibus, eget dapibus nibh porta.</p>
 				</div>
 
-				<div class="two-fifth services">
+				<div class="half services">
 					<h3>Services</h3>
 					<ul>
 						<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>

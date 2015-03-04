@@ -38,7 +38,14 @@
 }
 
 
-.half, .third, .fifth, .two-fifth {
+.three-fifth {
+	@include respond-to( 768px ) {
+		width: 60%;
+	}
+}
+
+
+.half, .third, .fifth, .two-fifth, .three-fifth {
 	display: block;
 	padding: 8px 15px;
 

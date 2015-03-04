@@ -140,6 +140,102 @@ function tq_metaboxes() {
 	));
 
 
+	// INDUSTRY LABEL METABOX
+	$cmb_industry = new_cmb2_box( array(
+		'id' => CMB_PREFIX . 'industry',
+		'title' => __( 'Industry Information', 'cmb2' ),
+		'object_types' => array( 'page', ), // Post type
+		'context' => 'normal',
+		'priority' => 'high',
+		'show_names' => true, // Show field names on the left
+		'show_on' => array( 'template' => array( 'page-industry' ) )
+	) );
+
+	$cmb_industry->add_field( array(
+		'name' => 'Background Image',
+		'id' => CMB_PREFIX . 'industry_background',
+		'type' => 'file',
+	) );
+
+	$cmb_industry->add_field(array(
+	    'name' => 'Background Color',
+	    'id' => CMB_PREFIX . 'industry_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_industry->add_field( array(
+		'name' => 'Button Text (1)',
+		'id' => CMB_PREFIX . 'industry_button_1_text',
+		'type' => 'text',
+	) );
+
+	$cmb_industry->add_field( array(
+		'name' => 'Button Link (1)',
+		'id' => CMB_PREFIX . 'industry_button_1_link',
+		'type' => 'text',
+	) );
+
+	$cmb_industry->add_field( array(
+		'name' => 'Button Icon (1)',
+		'id' => CMB_PREFIX . 'industry_button_1_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_industry->add_field(array(
+	    'name' => 'Button Color (1)',
+	    'id' => CMB_PREFIX . 'industry_button_1_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_industry->add_field( array(
+		'name' => 'Button Text (2)',
+		'id' => CMB_PREFIX . 'industry_button_2_text',
+		'type' => 'text',
+	) );
+
+	$cmb_industry->add_field( array(
+		'name' => 'Button Link (2)',
+		'id' => CMB_PREFIX . 'industry_button_2_link',
+		'type' => 'text',
+	) );
+
+	$cmb_industry->add_field( array(
+		'name' => 'Button Icon (2)',
+		'id' => CMB_PREFIX . 'industry_button_2_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_industry->add_field(array(
+	    'name' => 'Button Color (2)',
+	    'id' => CMB_PREFIX . 'industry_button_2_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Blue - Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+
 	// NARROW-THIRDS METABOX
 	$cmb_thirds = new_cmb2_box( array(
 		'id' => CMB_PREFIX . 'narrow_thirds',
@@ -148,6 +244,7 @@ function tq_metaboxes() {
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
+		'show_on' => array( 'template' => array( 'page-front', 'page-industry' ) )
 	) );
 
 	$cmb_thirds->add_field( array(
