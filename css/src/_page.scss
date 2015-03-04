@@ -2,6 +2,14 @@
 
 .subtitle {
 	padding: 20px 30px;
+
+	@include respond-to( 768px ) {
+		font-size: 35px;
+	}
+
+	@include respond-to( 1024px ) {
+		font-size: 40px;
+	}
 }
 
 .main-content {
@@ -9,5 +17,7 @@
 	background-position: left center;
 	background-size: contain;
 	padding: 30px;
+	font-size: 1.2em;
+	line-height: 1.5em;
 }
 
