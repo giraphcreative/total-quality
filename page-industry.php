@@ -70,22 +70,22 @@ get_header();
 
 				<div class="half news">
 					<h3>News</h3>
-					<h4><a href="#">01.03.2015</a></h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt sapien vitae massa elementum imperdiet. Nullam at viverra orci. Praesent pharetra quam eu orci finibus, eget dapibus nibh porta.</p>
-					<h4><a href="#">01.03.2015</a></h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt sapien vitae massa elementum imperdiet. Nullam at viverra orci. Praesent pharetra quam eu orci finibus, eget dapibus nibh porta.</p>
+					<?php 
+					$args = array( 'numberposts' => '2' );
+					$recent_posts = wp_get_recent_posts( $args );
+					foreach( $recent_posts as $recent ){
+						echo '<h4><a href="' . get_permalink( $recent["ID"] ) . '">' . date( 'n.j.Y', strtotime( $recent["post_date"] ) ) . '</a></h4>';
+						echo "<p>" . ( !empty( $recent['post_excerpt'] ) ? $recent["post_excerpt"] : substr( $recent['post_content'], 0, 200 ) . '...' ) . "</p>";
+					}
+					?>
 				</div>
 
 				<div class="half services">
 					<h3>Services</h3>
-					<ul>
-						<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-						<li>Sed tincidunt sapien vitae massa elementum imperdiet.</li>
-						<li>Nullam at viverra orci.</li>
-						<li>Praesent pharetra quam eu orci finibus, eget dapibus nibh porta.</li>
-						<li>Sed tincidunt sapien vitae massa elementum imperdiet.</li>
-						<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-					</ul>
+					<?php
+					$services = get_page_by_path( 'services' );
+					print $services->post_content;
+					?>
 				</div>
 
 			</div>
