@@ -26,8 +26,8 @@
 					Financial: DQD@TotalQualityConsulting.com</p>
 			</div>
 			<div class="third social">
-				<a href="#"><img src="<?php print get_template_directory_uri() ?>/img/social-facebook.png"></a>
-				<a href="#"><img src="<?php print get_template_directory_uri() ?>/img/social-linkedin.png"></a>
+				<a href="https://www.google.com/url?q=https%3A%2F%2Fwww.facebook.com%2FTotalQualityConsultingInc&sa=D&sntz=1&usg=AFQjCNFhsTWjGzeLStTIM_vmDFwJAiqksg" target="_blank"><img src="<?php print get_template_directory_uri() ?>/img/social-facebook.png"></a>
+				<a href="http://www.linkedin.com/pub/doug-duong/3/a78/684" target="_blank"><img src="<?php print get_template_directory_uri() ?>/img/social-linkedin.png"></a>
 			</div>
 
 		</footer>
