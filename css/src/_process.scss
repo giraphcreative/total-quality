@@ -102,10 +102,10 @@ $arrow-increment: 100px;
 			text-align: center;
 
 			@include respond-to( 768px ) {
-				text-align: left;
 				position: absolute;
 				left: 130px;
 				top: 50%;
+				right: 67%;
 				margin-top: -25px;
 				height: 50px;
 				line-height: 50px;
