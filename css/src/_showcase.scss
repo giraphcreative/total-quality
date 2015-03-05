@@ -70,6 +70,23 @@
 			bottom: 40px;
 		}
 	}
+	
+	.flower {
+		display: none;
 
+		@include respond-to( 1100px ) {
+			display: block;
+			position: absolute;
+			bottom: 5px;
+			left: 5px;
+			width: 445px;
+			height: 445px;
+		}
+
+		@include respond-to( 1220px ) {
+			left: 30px;
+			bottom: 25px;
+		}
+	}
 }
 

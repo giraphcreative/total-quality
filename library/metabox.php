@@ -468,6 +468,221 @@ function tq_metaboxes() {
 	) );
 
 
+	// PROCESS
+	$cmb_process = new_cmb2_box( array(
+		'id' => CMB_PREFIX . 'process',
+		'title' => __( 'Process', 'cmb2' ),
+		'object_types' => array( 'page', ), // Post type
+		'context' => 'normal',
+		'priority' => 'high',
+		'show_names' => true, // Show field names on the left
+		'show_on' => array( 'key' => 'template', 'value' => array( 'page-process' ) )
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Subtitle',
+		'id' => CMB_PREFIX . 'page_subtitle',
+		'type' => 'text',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 1 Icon',
+		'id' => CMB_PREFIX . 'process_step_1_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 1 Title',
+		'id' => CMB_PREFIX . 'process_step_1_title',
+		'type' => 'text',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 1 Content',
+		'id' => CMB_PREFIX . 'process_step_1_content',
+		'type' => 'textarea_small',
+	) );
+
+	$cmb_process->add_field(array(
+	    'name' => 'Step 1 Color',
+	    'id' => CMB_PREFIX . 'process_step_1_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
+	        'bg-grey-light' => __( 'Grey', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 2 Icon',
+		'id' => CMB_PREFIX . 'process_step_2_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 2 Title',
+		'id' => CMB_PREFIX . 'process_step_2_title',
+		'type' => 'text',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 2 Content',
+		'id' => CMB_PREFIX . 'process_step_2_content',
+		'type' => 'textarea_small',
+	) );
+
+	$cmb_process->add_field(array(
+	    'name' => 'Step 2 Color',
+	    'id' => CMB_PREFIX . 'process_step_2_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
+	        'bg-grey-light' => __( 'Grey', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 3 Icon',
+		'id' => CMB_PREFIX . 'process_step_3_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 3 Title',
+		'id' => CMB_PREFIX . 'process_step_3_title',
+		'type' => 'text',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 3 Content',
+		'id' => CMB_PREFIX . 'process_step_3_content',
+		'type' => 'textarea_small',
+	) );
+
+	$cmb_process->add_field(array(
+	    'name' => 'Step 3 Color',
+	    'id' => CMB_PREFIX . 'process_step_3_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
+	        'bg-grey-light' => __( 'Grey', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 4 Icon',
+		'id' => CMB_PREFIX . 'process_step_4_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 4 Title',
+		'id' => CMB_PREFIX . 'process_step_4_title',
+		'type' => 'text',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 4 Content',
+		'id' => CMB_PREFIX . 'process_step_4_content',
+		'type' => 'textarea_small',
+	) );
+
+	$cmb_process->add_field(array(
+	    'name' => 'Step 4 Color',
+	    'id' => CMB_PREFIX . 'process_step_4_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
+	        'bg-grey-light' => __( 'Grey', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 5 Icon',
+		'id' => CMB_PREFIX . 'process_step_5_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 5 Title',
+		'id' => CMB_PREFIX . 'process_step_5_title',
+		'type' => 'text',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 5 Content',
+		'id' => CMB_PREFIX . 'process_step_5_content',
+		'type' => 'textarea_small',
+	) );
+
+	$cmb_process->add_field(array(
+	    'name' => 'Step 5 Color',
+	    'id' => CMB_PREFIX . 'process_step_5_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
+	        'bg-grey-light' => __( 'Grey', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 6 Icon',
+		'id' => CMB_PREFIX . 'process_step_6_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 6 Title',
+		'id' => CMB_PREFIX . 'process_step_6_title',
+		'type' => 'text',
+	) );
+
+	$cmb_process->add_field( array(
+		'name' => 'Step 6 Content',
+		'id' => CMB_PREFIX . 'process_step_6_content',
+		'type' => 'textarea_small',
+	) );
+
+	$cmb_process->add_field(array(
+	    'name' => 'Step 6 Color',
+	    'id' => CMB_PREFIX . 'process_step_6_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
+	        'bg-grey-light' => __( 'Grey', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
 }
 
 
