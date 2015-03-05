@@ -97,13 +97,6 @@ function tq_metaboxes() {
 	) );
 
 	$cmb_showcase->add_field( array(
-		'name' => __( 'Link', 'cmb2' ),
-		'desc' => __( 'Enter a link for the showcase.', 'cmb2' ),
-		'id' => CMB_PREFIX . 'showcase_link',
-		'type' => 'text',
-	) );
-
-	$cmb_showcase->add_field( array(
 		'name' => __( 'Photo', 'cmb2' ),
 		'desc' => __( 'Upload an image or enter a URL.', 'cmb2' ),
 		'id' => CMB_PREFIX . 'showcase_photo',
@@ -114,6 +107,13 @@ function tq_metaboxes() {
 		'name' => __( 'Button Text', 'cmb2' ),
 		'desc' => __( 'Text to display on the button', 'cmb2' ),
 		'id' => CMB_PREFIX . 'showcase_button_text',
+		'type' => 'text',
+	) );
+
+	$cmb_showcase->add_field( array(
+		'name' => __( 'Button Link', 'cmb2' ),
+		'desc' => __( 'Enter a link for the button.', 'cmb2' ),
+		'id' => CMB_PREFIX . 'showcase_link',
 		'type' => 'text',
 	) );
 
