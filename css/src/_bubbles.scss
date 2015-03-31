@@ -49,6 +49,10 @@
 				line-height: 1.4em;
 				padding: 0;
 			}
+
+			a {
+				color: white;
+			}
 		}
 
 		@include respond-to( 500px ) {
