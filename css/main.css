@@ -540,6 +540,15 @@ footer {
       right: 0;
       bottom: 0;
       width: auto; } }
+  footer .contact a, footer .location a {
+    color: white;
+    opacity: .8;
+    -webkit-transition: opacity 400ms ease-in-out;
+            transition: opacity 400ms ease-in-out;
+    text-decoration: none; }
+    footer .contact a:hover, footer .location a:hover {
+      opacity: 1;
+      border-bottom: 1px dotted #6b88a8; }
 
 .copyright {
   padding: 20px;

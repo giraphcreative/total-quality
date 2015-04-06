@@ -12,6 +12,20 @@ footer {
 			width: auto;
 		}
 	}
+
+	.contact, .location {
+		a {
+			color: white;
+			opacity: .8;
+			transition: opacity 400ms ease-in-out;
+			text-decoration: none;
+
+			&:hover {
+				opacity: 1;
+				border-bottom: 1px dotted lighten( $blue-dark, 30% );
+			}
+		}
+	}
 }
 
 
