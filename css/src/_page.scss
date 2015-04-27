@@ -21,3 +21,20 @@
 	line-height: 1.5em;
 }
 
+
+img {
+	&.alignleft, &.alignright {
+		max-width: 55%;
+	}
+
+	&.alignleft {
+		float: left;
+		margin: 0 10px 10px 0;
+	}
+
+	&.alignright {
+		float: right;
+		margin: 0 0 10px 10px;
+	}
+}
+

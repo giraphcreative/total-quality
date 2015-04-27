@@ -327,6 +327,15 @@ header {
   font-size: 1.2em;
   line-height: 1.5em; }
 
+img.alignleft, img.alignright {
+  max-width: 55%; }
+img.alignleft {
+  float: left;
+  margin: 0 10px 10px 0; }
+img.alignright {
+  float: right;
+  margin: 0 0 10px 10px; }
+
 .bubbles {
   padding: 15px; }
   .bubbles .bubble {
