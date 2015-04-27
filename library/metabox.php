@@ -235,6 +235,38 @@ function tq_metaboxes() {
 	    'default' => 'bg-blue-dark',
 	));
 
+	$cmb_industry->add_field( array(
+		'name' => 'Button Text (3)',
+		'id' => CMB_PREFIX . 'industry_button_3_text',
+		'type' => 'text',
+	) );
+
+	$cmb_industry->add_field( array(
+		'name' => 'Button Link (3)',
+		'id' => CMB_PREFIX . 'industry_button_3_link',
+		'type' => 'text',
+	) );
+
+	$cmb_industry->add_field( array(
+		'name' => 'Button Icon (3)',
+		'id' => CMB_PREFIX . 'industry_button_3_icon',
+		'type' => 'file',
+	) );
+
+	$cmb_industry->add_field(array(
+	    'name' => 'Button Color (3)',
+	    'id' => CMB_PREFIX . 'industry_button_3_color',
+	    'type' => 'select',
+	    'options' => array(
+	        'bg-blue-dark' => __( 'Blue - Dark', 'cmb' ),
+	        'bg-blue-medium-dark' => __( 'Blue - Medium Dark', 'cmb' ),
+	        'bg-blue-medium' => __( 'Blue - Medium', 'cmb' ),
+	        'bg-blue-light' => __( 'Blue - Light', 'cmb' ),
+	        'bg-green' => __( 'Green', 'cmb' ),
+	    ),
+	    'default' => 'bg-blue-dark',
+	));
+
 
 	// NARROW-THIRDS METABOX
 	$cmb_thirds = new_cmb2_box( array(

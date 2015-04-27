@@ -46,6 +46,18 @@ get_header();
 					<?php show_cmb_value( 'industry_button_2_text' ) ?>
 					</a>
 				<?php } ?>
+				
+				<?php if ( has_cmb_value( 'industry_button_3_text' ) 
+					&& has_cmb_value( 'industry_button_3_color' ) ) { ?>
+				<a href="<?php show_cmb_value( 'industry_button_3_link' ) ?>" class="button-large <?php show_cmb_value( 'industry_button_3_color' ) ?>">
+					<?php if ( has_cmb_value( 'industry_button_3_icon' ) ) { ?>
+					<div class="icon <?php show_cmb_value( 'industry_button_3_color' ) ?>">
+						<img src="<?php show_cmb_value( 'industry_button_3_icon' ) ?>">
+					</div>
+					<?php } ?>
+					<?php show_cmb_value( 'industry_button_3_text' ) ?>
+					</a>
+				<?php } ?>
 
 				</div>
 			</div>

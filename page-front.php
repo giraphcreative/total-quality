@@ -44,7 +44,7 @@ get_header();
 					$recent_posts = wp_get_recent_posts( $args );
 					foreach( $recent_posts as $recent ){
 						echo '<h4><a href="' . get_permalink( $recent["ID"] ) . '">' . date( 'n.j.Y', strtotime( $recent["post_date"] ) ) . '</a></h4>';
-						echo "<p>" . ( !empty( $recent['post_excerpt'] ) ? $recent["post_excerpt"] : substr( $recent['post_content'], 0, 200 ) . '...' ) . "</p>";
+						echo "<p>" . ( !empty( $recent['post_excerpt'] ) ? $recent["post_excerpt"] : substr( $recent['post_content'], 0, 400 ) . '...' ) . "</p>";
 					}
 					?>
 				</div>
