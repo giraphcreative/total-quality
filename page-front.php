@@ -35,7 +35,6 @@ get_header();
 
 				<div class="fifth chat">
 					<img src="<?php bloginfo( 'template_url' ) ?>/img/icon-chat.png">
-					<p>Lorem ipsum dolar sit amet.</p>
 				</div>
 
 				<div class="two-fifth news">
