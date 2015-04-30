@@ -20,7 +20,6 @@ $bubbles = get_cmb_value( 'bubbles' );
 				<?php 
 				if ( !empty( $bubbles ) ) {
 					foreach ( $bubbles as $bubble ) {
-						print $bubble["image"];
 						?>
 				<div class="bubble">
 					<div class="photo">
