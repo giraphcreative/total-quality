@@ -25,13 +25,10 @@ function tq_image_resize( $url, $width, $height = null, $crop = null, $single = 
     $upload_dir = $upload_info['basedir'];
     $upload_url = $upload_info['baseurl'];
 
-	//check if $img_url is local
-    if (strpos($url, $upload_url) === false)
-        return false;
 
 	//define path of image
     $rel_path = str_replace($upload_url, '', $url);
-    $img_path = $upload_dir . $rel_path;
+    $img_path = str_replace( "/wp-content/uploads", "", $upload_dir ) . $rel_path;
 
 	//check if img path exists, and is an image indeed
     if (!file_exists($img_path) OR !getimagesize($img_path))
@@ -46,6 +43,7 @@ function tq_image_resize( $url, $width, $height = null, $crop = null, $single = 
     $dims = image_resize_dimensions( $orig_w, $orig_h, $width, $height, $crop );
     $dst_w = $dims[4];
     $dst_h = $dims[5];
+
 
 	//use this to check if cropped image already exists, so we can return that instead
     $suffix = "{$dst_w}x{$dst_h}";
