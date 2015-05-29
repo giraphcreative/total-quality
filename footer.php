@@ -28,7 +28,7 @@
 			</div>
 			<div class="third social">
 				<a href="https://www.facebook.com/pages/Total-Quality-Consulting/412206545474969" target="_blank"><img src="<?php print get_template_directory_uri() ?>/img/social-facebook.png"></a>
-				<a href="https://www.linkedin.com/profile/view?id=304356232&authType=NAME_SEARCH&authToken=jtig&locale=en_US&srchid=74882141432386512143&srchindex=5&srchtotal=773&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A74882141432386512143%2CVSRPtargetId%3A304356232%2CVSRPcmpt%3Aprimary%2CVSRPnm%3Atrue" target="_blank"><img src="<?php print get_template_directory_uri() ?>/img/social-linkedin.png"></a>
+				<a href="https://www.linkedin.com/in/totalqualityconsulting" target="_blank"><img src="<?php print get_template_directory_uri() ?>/img/social-linkedin.png"></a>
 			</div>
 
 		</footer>
